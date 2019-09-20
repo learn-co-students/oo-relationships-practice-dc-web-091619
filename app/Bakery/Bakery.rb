@@ -1,4 +1,4 @@
-# #### Bakery
+# #### Bakery 
 
 # >>>>> #ingredients
 #   - should return an array of ingredients for the bakery's desserts
@@ -11,11 +11,16 @@
 # >>>>> #shopping_list
 #   - should return a string of names for ingredients for the bakery
 
+## Bakery > Dessert > Ingredient
+## you want to start to work with the highest hierarchy because it will not depend on other classes.
+
 class Bakery
+
+    attr_accessor :name
     @@all = []
-    attr_accessor :bakery
-    def initialize(bakery)
-        @bakery = bakery
+
+    def initialize(name)
+        @name = name
         @@all << self
     end
 
@@ -23,9 +28,15 @@ class Bakery
         @@all
     end
 
+    def desserts
+        Dessert.all.select do |dessert|
+            dessert.bakery == self
+        end
+    end
+
     def ingredients
-        self.desserts.collect do |dessert|
-            dessert.ingredient
+        Ingredient.all.select do |ingredient|
+            ingredient.bakery == self
         end
     end
     
@@ -35,14 +46,13 @@ class Bakery
         end
     end
 
-    def desserts
-        Desserts.all.select do |dessert|
-            dessert.bakery == self
-        end
-    end
-
+    # should return a number// totaling the average number of calories for the desserts sold at this bakery
     def average_calories
-        self.desserts
+        total = 0
+        self.desserts.each do |dessert|
+            total + dessert.calories / dessert.ingreidents.length
+        end
+        total
     end
 
 end
