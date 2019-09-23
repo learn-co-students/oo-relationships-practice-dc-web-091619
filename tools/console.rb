@@ -63,7 +63,7 @@ ride1 = Ride.new(2.1, sergio, harry)
 ride2 = Ride.new(4.1, sergio, franklin)
 ride3 = Ride.new(2.1, billy, harry)
 ride4 = Ride.new(5.1, billy, henry)
-ride5 = Ride.new(3.1, drake, franklin)
+ride5 = Ride.new(3.0, drake, franklin)
 
 # Test Methods 
 

@@ -40,10 +40,10 @@ class Driver
         end
        
         Ride.all.map do |ride| 
-            driver_miles[ride.driver] += ride.distance     #going through the hash and adding up the distance for every driver
+            driver_miles[ride.driver] += ride.distance  #going through the hash and adding up the distance for every driver
         end
 
-        driver_miles.select {|driver, miles| miles > distance}  #going through hash and using select 
+        driver_miles.select {|driver, miles| miles.round > distance}  #going through hash and using select 
       
         
 
