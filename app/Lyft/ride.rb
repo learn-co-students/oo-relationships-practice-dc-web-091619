@@ -14,8 +14,8 @@ class Ride
     @@all = []
 
     def initialize(distance, passenger, driver)
-        @distance = distance
-        @passenger = passenger
+        @distance = distance.to_f  # make the distance given as a float
+        @passenger = passenger     # because the readme asked for it
         @driver = driver
         @@all << self
     end
