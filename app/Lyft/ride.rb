@@ -1,0 +1,32 @@
+# #### Ride  
+
+# - #passenger
+#   - returns the passenger object for that ride
+# - #driver
+#   - returns the driver object for that ride
+# - .average_distance
+#   - should find the average distance of all rides
+
+class Ride
+
+    attr_reader :passenger, :driver
+    attr_accessor :distance #this can be either reader or accessor
+    @@all = []
+
+    def initialize(distance, passenger, driver)
+        @distance = distance
+        @passenger = passenger
+        @driver = driver
+        @@all << self
+    end
+
+    def self.all
+        @@all
+    end
+
+    def self.average_distance
+        all_distance = self.all.map {|ele| ele.distance}
+        all_distance.sum / all_distance.length
+    end
+
+end
