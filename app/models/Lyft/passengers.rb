@@ -17,20 +17,21 @@ class Passengers
     end
     def rides
         Rides.all.select do |ride|
-            self.drivers.include?(ride.drivers)
-            binding.pry
+            # binding.pry
+            ride if ride.passengers == self
         end
     end
     def total_distance
         #calculates the total distance the passenger has traveled within the service
         total_distance = 0
         self.rides.each do |ride|
-            binding.pry
             total_distance = total_distance + ride.distance
         end 
         total_distance
     end
     def self.premium_members
-
+        self.all.select do |passenger|
+            passenger.total_distance > 100
+        end
     end
 end
