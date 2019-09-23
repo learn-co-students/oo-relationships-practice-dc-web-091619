@@ -22,13 +22,14 @@ class Driver
     end
     
     def passengers
-        his_passengers = []
+        # his_passengers = []
 
-        rides.select do |ride|
-            his_passengers << ride.passenger ##pushes the passenger name into the new array
-        end
+        # rides.select do |ride|
+        #     his_passengers << ride.passenger ##pushes the passenger name into the new array
+        # end
 
-        his_passengers #returns an array of this drivers passengers
+        # his_passengers #returns an array of this drivers passengers
+        self.rides.map { |ride| ride.passenger}
     end
 
     def self.mileage_cap(distance = 0.00)

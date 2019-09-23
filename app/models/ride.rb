@@ -32,7 +32,7 @@ class Ride
 
         Ride.all.each {|rides| total_distance += rides.distance} #goes through rides and adds distance to the total_distance variable
 
-        total_distance / Ride.all.length #divies the total distance by the length of all rides 
+        total_distance / self.all.length #divies the total distance by the length of all rides 
     end
 
 end
