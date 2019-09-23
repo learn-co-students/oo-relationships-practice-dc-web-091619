@@ -39,25 +39,25 @@ end
 
 # >>>>>>>>>>>>>>>>>>>>>>> varialbes for the Lyft LAB
 
-Dr1 = Driver.new("Driver1")
-Dr2 = Driver.new("Driver2")
-Dr3 = Driver.new("Driver3")
+# Dr1 = Driver.new("Driver1")
+# Dr2 = Driver.new("Driver2")
+# Dr3 = Driver.new("Driver3")
 
-Pa1 = Passenger.new("Passenger1")
-Pa2 = Passenger.new("Passenger2")
-Pa3 = Passenger.new("Passenger3")
+# Pa1 = Passenger.new("Passenger1")
+# Pa2 = Passenger.new("Passenger2")
+# Pa3 = Passenger.new("Passenger3")
 
-Ride1 = Ride.new(20, Pa1, Dr2)
-Ride2 = Ride.new(30, Pa2, Dr1)
-Ride3 = Ride.new(40, Pa3, Dr3)
+# Ride1 = Ride.new(20, Pa1, Dr2)
+# Ride2 = Ride.new(30, Pa2, Dr1)
+# Ride3 = Ride.new(40, Pa3, Dr3)
 
-Ride4 = Ride.new(20, Pa1, Dr2)
-Ride5 = Ride.new(50, Pa2, Dr1)
-Ride6 = Ride.new(60, Pa3, Dr3)
+# Ride4 = Ride.new(20, Pa1, Dr2)
+# Ride5 = Ride.new(50, Pa2, Dr1)
+# Ride6 = Ride.new(60, Pa3, Dr3)
 
-Ride7 = Ride.new(10, Pa1, Dr2)
-Ride8 = Ride.new(40, Pa2, Dr1)
-Ride9 = Ride.new(40, Pa3, Dr3)
+# Ride7 = Ride.new(10, Pa1, Dr2)
+# Ride8 = Ride.new(40, Pa2, Dr1)
+# Ride9 = Ride.new(40, Pa3, Dr3)
 
 ### Dr1 >> 120, Dr2 >> 50, Dr3 >>140
 ### Pa1 >> 50, Pa2 >> 120, Pa3 >> 140

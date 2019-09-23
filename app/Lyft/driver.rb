@@ -20,11 +20,11 @@ class Driver
     end
 
     def rides
-        Ride.all.select {|ele| ele.driver == self}
+        Ride.all.select {|ride| ride.driver == self}
     end
 
     def passengers
-        self.rides.map {|ele| ele.passenger}
+        self.rides.map {|ride| ride.passenger}
     end
 
     def self.all

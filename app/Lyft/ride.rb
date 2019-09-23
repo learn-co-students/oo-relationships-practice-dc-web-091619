@@ -25,7 +25,7 @@ class Ride
     end
 
     def self.average_distance
-        all_distance = self.all.map {|ele| ele.distance}
+        all_distance = self.all.map {|ride| ride.distance}
         all_distance.sum / all_distance.length
     end
 
