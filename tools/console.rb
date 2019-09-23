@@ -13,16 +13,16 @@ end
 # bakery1.average_calories
 # bakery1.ingredients
 # binding.pry
-passenger1 = Passengers.new("Takeshi")
-passenger2 = Passengers.new("Andrea")
-driver1 = Drivers.new("Kotomi", passenger1)
-driver2 = Drivers.new("Hanataro", passenger2)
-ride1 = Rides.new(driver1, passenger1, 25)
-ride2 = Rides.new(driver2, passenger2, 50)
-ride3 = Rides.new(driver2, passenger2, 75)
-ride1.distance
-driver1.rides
-binding.pry
+# passenger1 = Passengers.new("Takeshi")
+# passenger2 = Passengers.new("Andrea")
+# driver1 = Drivers.new("Kotomi", passenger1)
+# driver2 = Drivers.new("Hanataro", passenger2)
+# ride1 = Rides.new(driver1, passenger1, 25)
+# ride2 = Rides.new(driver2, passenger2, 50)
+# ride3 = Rides.new(driver2, passenger2, 75)
+# ride1.distance
+# driver1.rides
+# binding.pry
 # general_assembly = Code_Camp.new("General Assembly", "Python, C++")
 # flatiron = Code_Camp.new("Flatiron", "Ruby, Javascript")
 # debugging_101 = Projects.new("Debugging 101", "Ruby, C++")
@@ -32,4 +32,7 @@ binding.pry
 # sergio = Developer.new("Sergio", flatiron, oo_relationships)
 # charles = Developer.new("Charles", flatiron, debugging_101)
 # binding.pry
+listing1 = Listing.new("name")
+listing2 = Listing.new("name")
+binding.pry
 0
