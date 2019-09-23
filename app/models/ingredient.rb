@@ -21,8 +21,8 @@ class Ingredient
     end
 
     def self.find_all_by_name(ingredient)
-        #ingredients = self.all.map{|ing| ##uncomment this array and replace w/ "self.all" & take out .name below 
-        #    ing.name}     ## to make function return ingredient string names instead of objects
+        #ingredient_names = self.all.map{|ing| ##uncomment this array and replace w/ "self.all" & take out .name below 
+         #   ing.name}     ## to make function return ingredient string names instead of objects
         less_ingredients = self.all.select{|ing|
             ing.name.include?(ingredient)}
     end

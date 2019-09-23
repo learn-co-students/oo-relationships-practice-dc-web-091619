@@ -6,25 +6,24 @@ end
 
 
 
-tonys = Bakery.new("Tony's")
-jonnys = Bakery.new("Jonny's")
+mo = Driver.new("Mo")
+charles = Driver.new("Charles")
+joseph = Driver.new("Joseph")
 
 
-chocolate_cake = Dessert.new("chocolate cake", tonys)
-flan = Dessert.new("flan", tonys)
-ice_cream = Dessert.new("ice cream", jonnys)
 
-ing1 = Ingredient.new("chocolate", 100, chocolate_cake)
-ing2 = Ingredient.new("flour", 500, chocolate_cake)
-ing3 = Ingredient.new("milk", 700, chocolate_cake)
-ing4 = Ingredient.new("eggs", 400, chocolate_cake)
-ing5 = Ingredient.new("caramel", 200, flan)
-ing6 = Ingredient.new("bread", 400, flan)
-ing7 = Ingredient.new("nutmeg", 600, flan)
-ing8 = Ingredient.new("sugar", 800, flan)
-ing9 = Ingredient.new("chocolate sprinkles", 1000, ice_cream)
-ing10 = Ingredient.new("chocolate ice cream", 500, ice_cream)
-ing11 = Ingredient.new("chocolate sugar", 700, ice_cream)
+khaled = Passenger.new("Khaled")
+jon = Passenger.new("Jon")
+
+
+
+
+ride1 = Ride.new(14.0, khaled, mo)
+ride2 = Ride.new(12.0, khaled, joseph)
+ride3 = Ride.new(25.0, jon, mo)
+ride4 = Ride.new(76.0, khaled, mo)
+ride5 = Ride.new(41.0, jon, charles)
+
 
 
 
