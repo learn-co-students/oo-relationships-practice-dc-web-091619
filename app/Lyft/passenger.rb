@@ -27,15 +27,16 @@ class Passenger
     end
 
     def rides
-        Ride.all.select {|ele| ele.passenger == self}
+        Ride.all.select {|ride| ride.passenger == self}
     end
 
     def drivers
-        self.rides.map {|ele| ele.driver}
+        self.rides.map {|ride| ride.driver}
     end
 
     def total_distance
-        self.rides.map {|ele| ele.distance}.sum
+        self.rides.map {|ride| ride.distance}.sum
+        # instead of .sum, we can do .reduce(:+)
     end
 
     def self.premium_members

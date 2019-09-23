@@ -16,3 +16,10 @@ In Belongs_to relationship
 
 When you initialize objects in console, it has to be in order
 ex) initialize drivers and passengers first and initialize rides
+
+Assertion test
+ex) puts " passenger.premium_members should return an array of passengers whoes total distance is over 100"
+puts Passenger.premium_members.include?(elmo) == true
+    >>>> should return true
+puts Passenger.premium_members.include?(burt) == false
+    >>>> should return true
