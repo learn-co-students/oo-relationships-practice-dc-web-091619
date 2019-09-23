@@ -93,6 +93,37 @@ end
 # tom_t.give_grade(jane_s, spanish_c, 100)
 
 
+# >>>>>>>>>>>>>>>>>>>>>>> variables for the IMDB LAB
+# M1 = Movie.new("Hello")
+# M2 = Movie.new("Number2")
+
+# S1 = Show.new("Number2")
+# S2 = Show.new("Hello")
+
+# A1 = Actor.new("actor1")
+# A2 = Actor.new("actor2")
+# A3 = Actor.new("actor3")
+# A4 = Actor.new("actor4")
+
+# CH1 = Character.new("cha1", A3)
+# CH2 = Character.new("cha2", A4)
+# CH3 = Character.new("cha3", A1)
+# CH4 = Character.new("cha4", A2)
+# CH5 = Character.new("cha5", A2)
+# CH6 = Character.new("cha6", A4)
+# CH7 = Character.new("cha7", A1)
+# CH8 = Character.new("cha8", A2)
+
+# M_CH1 = MovieCharacter.new("one", M1, CH2)
+# M_CH2 = MovieCharacter.new("two", M1, CH4)
+# M_CH3 = MovieCharacter.new("three", M2, CH6)
+# S_CH1 = ShowCharacter.new("one", S1, CH1)
+# S_CH2 = ShowCharacter.new("two", S2, CH3)
+# S_CH3 = ShowCharacter.new("three", S2, CH4)
+
+
+
+
 
 binding.pry
 0
