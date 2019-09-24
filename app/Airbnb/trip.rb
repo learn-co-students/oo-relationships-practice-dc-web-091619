@@ -1,4 +1,4 @@
-# Listing >>> Trip <<<< Guest
+# Listing >>> Trip <<<< Guest 
 
 # #### Trip 
  
@@ -9,24 +9,19 @@
 # - .all
 #   - returns an array of all trips
 
-# class Trip
+class Trip
 
-#     @@all = []
+    attr_reader :guest, :listing
+    @@all = []
 
-#     def initialize(guest, listing)
-#         @guest = guest
-#         @listing = listing
-#         @@all << self
-#     end
+    def initialize(guest, listing)
+        @guest = guest
+        @listing = listing
+        @@all << self
+    end
 
-#     def listing
-#         Listing.all.select do |listing| 
-#             listing.trip == self 
-#         end
+    def self.all
+        @@all
+    end
 
-#     end
-#     def guest
-#         Guests.
-#     end
-
-# end
+end

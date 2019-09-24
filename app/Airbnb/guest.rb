@@ -1,4 +1,4 @@
-#### Guest
+#### Guest 
 
 # - #listings
 #   - returns an array of all listings a guest has stayed at
@@ -13,20 +13,38 @@
 # - .find_all_by_name(name)
 #   - takes an argument of a name (as a string), returns the all guests with that name
 
-# class Guest
+class Guest
 
-#     attr_accessor :name
-#     @@all = []
+    attr_reader :name
+    @@all = []
 
-#     def initialize(name)
-#         @name = name
-#         @@all << self
-#     end
+    def initialize(name)
+        @name = name
+        @@all << self
+    end
 
-#     def guests
+    def self.all
+        @@all
+    end
 
-#     end
+    def trips
+        Trip.all.select {|trip| trip.guest == self}
+    end
 
+    def listings
+        trips.map {|trip| trip.listing}
+    end
 
+    def trip_count
+        trips.length
+    end
 
-# end
+    def self.pro_traveller
+        self.all.select {|guest| guest.trip_count > 1}
+    end
+
+    def self.find_all_by_name(name)
+        self.all.select {|guest| guest.name == name}
+    end
+
+end

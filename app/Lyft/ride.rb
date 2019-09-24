@@ -1,4 +1,4 @@
-# #### Ride  
+# #### Ride
 
 # - #passenger
 #   - returns the passenger object for that ride

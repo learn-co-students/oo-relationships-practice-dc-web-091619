@@ -1,4 +1,4 @@
-#### Listing 
+#### Listing  
 # - #guests 
 #   - returns an array of all guests who have stayed at a listing
 # - #trips
@@ -12,29 +12,38 @@
 # - .most_popular
 #   - finds the listing that has had the most trips
 
-# class Listing
+class Listing
 
-#     attr_accessor :city_name
-#     @@all = []
+    attr_reader :city
+    @@all = []
 
-#     def initialize(city_name)
-#         @city_name = city_name
-#         @@all << self
-#     end
+    def initialize(city)
+        @city = city
+        @@all << self
+    end
 
-#     def trips
-#     end
+    def guests
+        trips.map {|trip| trip.guest}
+    end
 
-#     def trip_count
-#     end
+    def trips
+        Trip.all.select {|trip| trip.listing == self}
+    end
 
-#     def self.all
-#     end
+    def trip_count
+        trips.length
+    end
 
-#     def self.find_all_by_city(city)
-#     end
+    def self.all
+        @@all
+    end
 
-#     def self.most_popular
-#     end
+    def self.find_all_by_city(city)
+        self.all.select {|listing| listing.city == city}
+    end
 
-# end
+    def self.most_popular
+        self.all.max_by {|listing| listing.trip_count}
+    end
+
+end

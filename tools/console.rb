@@ -59,10 +59,29 @@ end
 # Ride8 = Ride.new(40, Pa2, Dr1)
 # Ride9 = Ride.new(40, Pa3, Dr3)
 
-### Dr1 >> 120, Dr2 >> 50, Dr3 >>140
-### Pa1 >> 50, Pa2 >> 120, Pa3 >> 140
+# ## Dr1 >> 120, Dr2 >> 50, Dr3 >>140
+# ## Pa1 >> 50, Pa2 >> 120, Pa3 >> 140
+
+
+
 
 # >>>>>>>>>>>>>>>>>>>>>>> variables for the AirBnB LAB
+
+G1 = Guest.new("Ana")
+G2 = Guest.new("Bear")
+G3 = Guest.new("Clare")
+
+L1 = Listing.new("DC")
+L2 = Listing.new("New York")
+L3 = Listing.new("Boston")
+
+T1 = Trip.new(G2, L3)
+T2 = Trip.new(G1, L3)
+T3 = Trip.new(G3, L2)
+T4 = Trip.new(G2, L1)
+T5 = Trip.new(G2, L3)
+T6 = Trip.new(G1, L1)
+
 
 
 
@@ -91,6 +110,8 @@ end
 # sandy_t.give_grade(jimmy_s, algebra_c, 60)
 # sandy_t.give_grade(jane_s, algebra_c, 80)
 # tom_t.give_grade(jane_s, spanish_c, 100)
+
+
 
 
 # >>>>>>>>>>>>>>>>>>>>>>> variables for the IMDB LAB
