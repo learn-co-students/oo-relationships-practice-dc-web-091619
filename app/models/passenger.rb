@@ -25,7 +25,7 @@ class Passenger
 
     def total_distance
         total = 0
-        self.rides.each{|ride|
+        self.rides.each{|ride|  ##look below for how to use reduce
             total += ride.distance}
         total
     end
@@ -38,3 +38,8 @@ class Passenger
 
 
 end
+
+
+# def total_distance
+#     self.rides.map{ |ride| ride.distance}.reduce{:+} ## how to use reduce
+# end

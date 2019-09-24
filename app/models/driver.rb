@@ -28,6 +28,7 @@ class Driver
         self.rides.each{|ride|
             total += ride.distance}
         total
+        self.rides.map{|ride| ride.distance}.sum  ##better way of doing it found in lecture
     end
 
     def self.mileage_cap(distance)
