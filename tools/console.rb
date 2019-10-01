@@ -32,7 +32,26 @@ end
 # sergio = Developer.new("Sergio", flatiron, oo_relationships)
 # charles = Developer.new("Charles", flatiron, debugging_101)
 # binding.pry
-listing1 = Listing.new("name")
-listing2 = Listing.new("name")
+listing1 = Listing.new("Hotel Pantheon", "Rome")
+listing2 = Listing.new("name", "Florence")
+listing3 = Listing.new("Piraeus Inn", "Athens")
+listing4 = Listing.new("Amberly Castle", "London")
+guest1 = Guest.new("Ikumi")
+guest2 = Guest.new("Orihime")
+guest3 = Guest.new("Kirito")
+guest4 = Guest.new("Asuna")
+trip1 = Trip.new("Rick Steve's Tour of Rome", guest1, listing1)
+trip2 = Trip.new("Rick Steve's Tour Guide to Florence", guest2, listing2)
+trip3 = Trip.new("Travel Athens", guest3, listing3)
+trip4 = Trip.new("In the Footsteps of the Caesars", guest1, listing1)
+trip5 = Trip.new("Journey to Rome", guest2, listing1)
+trip6 = Trip.new("In the Footsteps of the Normans", guest4, listing4)
+guest1.trips
+guest2.trips
+listing1.trip_count
+Listing.most_popular
+Guest.pro_traveler
+Listing.find_all_by_city("Rome")
+Guest.find_all_by_name("Ikumi")
 binding.pry
 0

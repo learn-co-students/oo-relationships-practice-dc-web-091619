@@ -1,11 +1,9 @@
 class Listing
-    attr_accessor :guests, :trips, :trip_count
+    attr_accessor :name, :city
     @@all = []
-    def initialize(name)
+    def initialize(name, city)
         @name = name
-        @guests = guests
-        @trips = trips
-        @trip_count = trip_count
+        @city = city
         @@all << self
     end
     def self.all
@@ -17,9 +15,22 @@ class Listing
         end
     end
     def trips 
-        Trip.all.map do |trip|
+        Trip.all.select do |trip|
             trip if trip.listing == self
+        end
+    end
+    def trip_count
+        trips.length
+    end
     def self.find_all_by_city(city_name)
-
+        self.all.find do |listing| 
+            listing.city == city_name
+            # binding.pry
+        end
+    end
+    def self.most_popular
+        self.all.max_by do |listing|
+            listing.trip_count
+        end
     end
 end
